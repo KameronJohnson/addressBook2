@@ -14,7 +14,7 @@ $(document).ready(function() {
                        state: inputtedState,
                        zip: inputtedZip,
                        fullAddress: function() {
-                         this.street + ", " + this.city + ", " + this.state + " " + this.zip;
+                         return this.street + ", " + this.city + ", " + this.state + " " + this.zip;
                        }
                      };
 
@@ -30,7 +30,10 @@ $(document).ready(function() {
 
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
-    $("input#new-address").val("");
+    $("input#new-street").val("");
+    $("input#new-city").val("");
+    $("input#new-state").val("");
+    $("input#new-zip").val("");
 
     $(".contact").last().click(function() {
       $("#show-contact").show();
